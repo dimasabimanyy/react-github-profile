@@ -43,15 +43,6 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.div`
-  /* padding: 1.5rem;
-  margin-bottom: 4rem;
-  background: var(--clr-white);
-  text-align: center;
-  display: grid;
-  grid-template-columns: auto auto 100px;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem; */
   text-align: center;
   padding: 1rem 0;
   h4 {
@@ -69,15 +60,8 @@ const Wrapper = styled.div`
     background: transparent;
     border: 2px solid var(--secondary-light-f);
     border-radius: 15px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 1px;
-    /* background: transparent;
-    border: transparent;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
-    cursor: pointer; */
   }
 `;
 

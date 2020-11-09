@@ -138,6 +138,10 @@ p {
   max-width: 1100px;
 }
 
+.section-search {
+  padding: 1rem 0;
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
