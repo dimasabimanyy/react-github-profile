@@ -24,13 +24,9 @@ const Followers = () => {
   );
 };
 
-const Wrapper = styled.article`
-  background: var(--clr-white);
-  border-top-right-radius: var(--radius);
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+const Wrapper = styled.div`
   position: relative;
-
+  height: 400px;
   &::before {
     content: " followers";
     position: absolute;
@@ -47,8 +43,9 @@ const Wrapper = styled.article`
     font-size: 1rem;
   }
   .followers {
-    overflow: scroll;
-    height: 260px;
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
     gap: 1.25rem 1rem;

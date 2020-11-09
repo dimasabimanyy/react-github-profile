@@ -30,12 +30,27 @@ const ChartComponent = ({ data }) => {
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: "Languanges",
+        caption: "Languages",
+        subCaption: "Most popular languages",
+        captionFont: "Poppins",
+        captionFontSize: "18",
+        captionFontColor: "#fff",
+        captionFontBold: "0",
+        subCaptionFontSize: "14",
+        subCaptionFontColor: "#a8c9cc",
         theme: "fusion",
         decimals: 0,
         pieRadius: "50%",
+        bgColor: "#171a25",
+        labelFont: "Poppins",
+        labelFontColor: "#a8c9cc",
+        labelFontSize: "14",
+        baseFont: "Poppins",
+        baseFontSize: "14",
+        baseFontColor: "#a8c9cc",
+        outCnvBaseFontColor: "#fff",
         // Make sure to have a lot of options if you want to set your own colors
-        // paletteColors: "#f0db4f",
+        paletteColors: ["#f0db4f", "#6E24FC"],
       },
       // Chart Data
       data: data,

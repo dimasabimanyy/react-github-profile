@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Followers from "./Followers";
 import { GithubContext } from "../context/context";
 import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from "./Charts";
 const Repos = () => {
@@ -28,7 +29,7 @@ const Repos = () => {
     .sort((a, b) => {
       return b.value - a.value;
     })
-    .slice(0, 5);
+    .slice(0, 7);
 
   // most stars per language | sort based from star
   const mostPopular = Object.values(languages)
@@ -38,7 +39,7 @@ const Repos = () => {
     .map((item) => {
       return { ...item, value: item.stars };
     })
-    .slice(0, 5);
+    .slice(0, 7);
 
   // stars, forks
   let { stars, forks } = repos.reduce(
@@ -57,8 +58,8 @@ const Repos = () => {
     }
   );
 
-  stars = Object.values(stars).slice(-5).reverse();
-  forks = Object.values(forks).slice(-5).reverse();
+  stars = Object.values(stars).slice(-10).reverse();
+  forks = Object.values(forks).slice(-7).reverse();
 
   const chartData = [
     {
@@ -77,21 +78,42 @@ const Repos = () => {
 
   return (
     <section className="section">
-      <Wrapper className="section-center">
+      <Wrapper className="container">
         {/* In case you forget how to make chart with fusion Chart */}
         {/* <ExampleChart data={chartData} /> */}
 
-        <Pie3D data={mostUsed} />
-        <Column3D data={stars} />
-        <Doughnut2D data={mostPopular} />
-        <Bar3D data={forks} />
+        <div className="repo-col-1">
+          <Pie3D data={mostUsed} />
+          <Followers />
+        </div>
+        <div className="repo-col-2">
+          <Column3D data={stars} />
+        </div>
+        <div className="repo-col-3">
+          <Doughnut2D data={mostPopular} />
+          <Bar3D data={forks} />
+        </div>
       </Wrapper>
     </section>
   );
 };
 
 const Wrapper = styled.div`
-  display: grid;
+  padding: 3rem 0;
+  /* background: maroon; */
+  div {
+  }
+  .repo-col-1,
+  .repo-col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+  .repo-col-1,
+  .repo-col-2 {
+    margin-bottom: 2rem;
+  }
+  /* display: grid;
   justify-items: center;
   gap: 2rem;
   @media (min-width: 800px) {
@@ -111,7 +133,7 @@ const Wrapper = styled.div`
   svg {
     width: 100% !important;
     border-radius: var(--radius) !important;
-  }
+  } */
 `;
 
 export default Repos;
