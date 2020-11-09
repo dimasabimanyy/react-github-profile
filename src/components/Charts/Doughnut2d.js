@@ -43,8 +43,33 @@ const ChartComponent = ({ data }) => {
         captionFontBold: "0",
         subCaptionFontSize: "14",
         subCaptionFontColor: "#a8c9cc",
+        animateClockwise: "1",
+        plotHighlightEffect: "fadeout",
+
+        labelFont: "Poppins",
+        labelFontColor: "#a8c9cc",
+        labelFontSize: "14",
+        baseFont: "Poppins",
+        baseFontSize: "14",
+        baseFontColor: "#a8c9cc",
+        outCnvBaseFontColor: "#fff",
+
+        legendIconBgColor: "#08ffbd",
+        // legendIconAlpha: "50",
+        // legendIconBgAlpha: "30",
+        legendIconBorderColor: "#00a579",
+        legendIconBorderThickness: "3",
+
+        legendNumRows: "3",
+        legendNumColumns: "3",
+
+        legendItemFont: "Poppins",
+        legendItemFontSize: "13",
+        legendItemFontColor: "#a8c9cc",
+        legendItemFontBold: "0",
         // Make sure to have a lot of options if you want to set your own colors
-        paletteColors: "#52ffd1, #22ff98, #08FFBD, #08d49e, #06b486, #049971",
+        paletteColors:
+          "#13EBA2, #3BFEB8, #0AD48B, #05AC72, #06a06a, #056644, #105e41",
       },
       // Chart Data
       data: data,

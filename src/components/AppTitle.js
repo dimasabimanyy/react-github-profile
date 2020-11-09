@@ -6,7 +6,10 @@ function AppTitle() {
     <Wrapper className="container">
       <h2>Github Profiler</h2>
       <h4>
-        Built by <span>dimasabimanyy</span>
+        Built by{" "}
+        <a href="https://github.com/dimasabimanyy" alt="Dimas abimanyu github">
+          dimasabimanyy
+        </a>
       </h4>
       <a
         href="https://github.com/dimasabimanyy/react-github-profile"
@@ -44,7 +47,8 @@ const Wrapper = styled.div`
   h2 {
     margin-bottom: 0.5rem;
   }
-  h4 {
+  h4,
+  a {
     font-family: var(--cursive-ff);
     color: #ffd908;
     font-size: 1.4rem;

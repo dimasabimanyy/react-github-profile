@@ -23,7 +23,7 @@ ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 const ChartComponent = ({ data }) => {
   // STEP 3 - Creating the JSON object to store the chart configurations
   const chartConfigs = {
-    type: "pie3d", // The chart type
+    type: "doughnut3d", // The chart type
     width: "100%", // Width of the chart
     height: "400", // Height of the chart
     dataFormat: "json", // Data type
@@ -49,16 +49,27 @@ const ChartComponent = ({ data }) => {
         baseFontSize: "14",
         baseFontColor: "#a8c9cc",
         outCnvBaseFontColor: "#fff",
+        doughnutRadius: "40%",
+        animateClockwise: "1",
+
+        plotHighlightEffect: "fadeout",
+
+        legendIconBgColor: "#08ffbd",
+        // legendIconAlpha: "50",
+        // legendIconBgAlpha: "30",
+        legendIconBorderColor: "#00a579",
+        legendIconBorderThickness: "3",
+
+        legendNumRows: "3",
+        legendNumColumns: "3",
+
+        legendItemFont: "Poppins",
+        legendItemFontSize: "13",
+        legendItemFontColor: "#a8c9cc",
 
         // Make sure to have a lot of options if you want to set your own colors
-        paletteColors: [
-          "#228AE6",
-          // "#FD7E13",
-          // "#FF922B",
-          // "#FC702E",
-          // "#BE4ADB",
-          // "#F8934F",
-        ],
+        paletteColors:
+          "#13EBA2, #3BFEB8, #0AD48B, #05AC72, #06a06a, #056644, #105e41",
       },
       // Chart Data
       data: data,
