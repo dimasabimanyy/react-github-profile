@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Mukta+Mahee:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,300;1,400;1,700&display=swap");
+
+/* Variables */
+
+:root {
+  /* color */
+  --light-f: #fff;
+  --dark-f: #1f2331;
+  --secondary-light-f: #08ffbd;
+  --light-bg: #08ffbd;
+  --dark-bg: #1f2331;
+  /* font */
+  --primary-ff: "Mukta Mahee", sans-serif;
+  --secondary-ff: "Poppins", sans-serif;
+  --cursive-ff: "Caveat", cursive;
+  /* Others */
+  --transition: all 0.3s ease-in-out;
+}
+
+/* Global styles */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-ff);
+  color: var(--light-f);
+  background: var(--dark-bg);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  font-family: var(--secondary-ff);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--light-f);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+.btn {
+  background: transparent;
+  color: var(--light-f);
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+  font-weight: 400;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: var(--secondary-ff);
+}
+.btn:hover {
+  background: var(--secondary-light-f);
+  color: var(--dark-f);
+}
+
+/* section */
+
+.container {
+  width: 90vw;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 1rem 0;
+  position: relative;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+/* .loading-img {
+  width: 20rem;
+  height: 20rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+main {
+  padding-bottom: 2rem;
+} */
