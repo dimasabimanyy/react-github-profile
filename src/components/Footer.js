@@ -8,11 +8,11 @@ function Footer() {
       <a href="https://reactjs.org/" alt="react js">
         React js
       </a>{" "}
-      -
+      -{" "}
       <a href="https://www.fusioncharts.com/" alt="fusion chart">
         Fusion Chart
       </a>{" "}
-      -
+      -{" "}
       <a href="https://styled-components.com/" alt="styled components">
         Styled Components
       </a>{" "}

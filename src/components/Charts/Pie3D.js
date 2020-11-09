@@ -49,8 +49,16 @@ const ChartComponent = ({ data }) => {
         baseFontSize: "14",
         baseFontColor: "#a8c9cc",
         outCnvBaseFontColor: "#fff",
+
         // Make sure to have a lot of options if you want to set your own colors
-        paletteColors: ["#f0db4f", "#6E24FC"],
+        paletteColors: [
+          "#228AE6",
+          // "#FD7E13",
+          // "#FF922B",
+          // "#FC702E",
+          // "#BE4ADB",
+          // "#F8934F",
+        ],
       },
       // Chart Data
       data: data,

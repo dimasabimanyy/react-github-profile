@@ -27,19 +27,20 @@ const Followers = () => {
 const Wrapper = styled.div`
   position: relative;
   height: 400px;
+  background: var(--darkest-bg);
   &::before {
     content: " followers";
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(-100%);
-    background: var(--clr-white);
-    color: var(--clr-grey-5);
-    border-top-right-radius: var(--radius);
-    border-top-left-radius: var(--radius);
+    background: var(--darkest-bg);
+    color: var(--gray-f);
+    font-family: var(--secondary-ff);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     text-transform: capitalize;
     padding: 0.5rem 1rem 0 1rem;
-    letter-spacing: var(--spacing);
     font-size: 1rem;
   }
   .followers {
@@ -48,8 +49,8 @@ const Wrapper = styled.div`
     height: 100%;
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
-    gap: 1.25rem 1rem;
-    padding: 1rem 2rem;
+    padding: 1.7rem 2rem;
+    gap: 1.5rem 1rem;
   }
   article {
     transition: var(--transition);
@@ -60,16 +61,20 @@ const Wrapper = styled.div`
     align-items: center;
     column-gap: 1rem;
     img {
-      height: 100%;
+      height: 45px;
       width: 45px;
       border-radius: 50%;
       object-fit: cover;
     }
     h4 {
-      margin-bottom: 0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
     }
     a {
-      color: var(--clr-grey-5);
+      color: var(--gray-f);
+      font-size: 0.98rem;
+      font-family: var(--primary-ff);
     }
   }
 `;

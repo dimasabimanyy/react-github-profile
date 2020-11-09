@@ -30,13 +30,21 @@ const ChartComponent = ({ data }) => {
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: "Stars Per Language",
+        caption: "Stars",
+        subCaption: "Stars per language",
         theme: "candy",
         decimals: 0,
-        doughnutRadius: "50%",
+        doughnutRadius: "40%",
         showPercentValues: 0,
+        bgColor: "#171a25",
+        captionFont: "Poppins",
+        captionFontSize: "18",
+        captionFontColor: "#fff",
+        captionFontBold: "0",
+        subCaptionFontSize: "14",
+        subCaptionFontColor: "#a8c9cc",
         // Make sure to have a lot of options if you want to set your own colors
-        // paletteColors: "#f0db4f",
+        paletteColors: "#52ffd1, #22ff98, #08FFBD, #08d49e, #06b486, #049971",
       },
       // Chart Data
       data: data,
