@@ -1,78 +1,82 @@
-import React from 'react';
-import { GithubContext } from '../context/context';
-import styled from 'styled-components';
-import { GoRepo, GoGist } from 'react-icons/go';
-import { FiUsers, FiUserPlus } from 'react-icons/fi';
+import React from "react";
+import { GithubContext } from "../context/context";
+import styled from "styled-components";
+import { GoRepo, GoGist } from "react-icons/go";
+import { FiUsers, FiUserPlus } from "react-icons/fi";
 
 const UserInfo = () => {
-  const { githubUser } = React.useContext(GithubContext)
-  const {public_repos, followers, following, public_gists} = githubUser;
+  const { githubUser } = React.useContext(GithubContext);
+  const { public_repos, followers, following, public_gists } = githubUser;
 
   const items = [
     {
       id: 1,
       icon: <GoRepo className="icon" />,
-      label: 'repos',
+      label: "repos",
       value: public_repos,
-      color: 'pink'
+      color: "pink",
     },
     {
       id: 2,
       icon: <FiUsers className="icon" />,
-      label: 'followers',
+      label: "followers",
       value: followers,
-      color: 'green'
+      color: "green",
     },
     {
       id: 3,
       icon: <FiUserPlus className="icon" />,
-      label: 'following',
+      label: "following",
       value: following,
-      color: 'purple'
+      color: "purple",
     },
     {
       id: 1,
       icon: <GoGist className="icon" />,
-      label: 'gists',
+      label: "gists",
       value: public_gists,
-      color: 'yellow'
+      color: "yellow",
     },
-  ]
+  ];
 
-  return <section className="section">
-    <Wrapper className="section-center">
-      {items.map(item => {
-        return <Item key={item.id} {...item}></Item>
-      })}
-    </Wrapper>
-  </section>;
+  return (
+    <section className="section">
+      <Wrapper className="container">
+        {items.map((item) => {
+          return <Item key={item.id} {...item}></Item>;
+        })}
+      </Wrapper>
+    </section>
+  );
 };
 
 const Item = ({ icon, label, value, color }) => {
-  return <article className="item">
-    <span className={color}>{icon}</span>
-    <div>
-      <h3>{value}</h3>
-      <p>{label}</p>
-    </div>
-  </article>
-}
+  return (
+    <article className="item">
+      <div>
+        <h3>{value}</h3>
+        <p>{label}</p>
+      </div>
+      <span className={color}>{icon}</span>
+    </article>
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem 2rem;
-  @media (min-width: 640px) {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  /* @media (min-width: 640px) {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  }
+  } */
   .item {
     border-radius: var(--radius);
-    padding: 1rem 2rem;
-    background: var(--clr-white);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 3rem;
+    background: #171a25;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+    padding: 1.7rem 1rem;
     span {
       width: 3rem;
       height: 3rem;
@@ -92,20 +96,20 @@ const Wrapper = styled.section`
       text-transform: capitalize;
     }
     .pink {
-      background: #ffe0f0;
-      color: #da4a91;
+      background: #dd614a;
+      color: #fff;
     }
     .green {
-      background: var(--clr-primary-10);
-      color: var(--clr-primary-5);
+      background: #44af69;
+      color: #fff;
     }
     .purple {
-      background: #e6e6ff;
-      color: #5d55fa;
+      background: #6957da;
+      color: #fff;
     }
     .yellow {
-      background: #fffbea;
-      color: #f0b429;
+      background: #c79e24;
+      color: #fff;
     }
   }
 `;

@@ -1,24 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import Card from './Card';
-import Followers from './Followers';
+import React from "react";
+import Card from "./Card";
 const User = () => {
-  return <section className="section">
-    <Wrapper className="section-center">
-      <Card></Card>
-      <Followers></Followers>
-    </Wrapper>
-  </section>;
+  return (
+    <section className="section">
+      <div className="container">
+        <Card></Card>
+      </div>
+      {/* <Followers></Followers> */}
+    </section>
+  );
 };
-
-const Wrapper = styled.div`
-  padding-top: 2rem;
-  display: grid;
-  gap: 3rem 2rem;
-  @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  /* align-items: start; */
-`;
 
 export default User;

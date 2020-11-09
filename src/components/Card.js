@@ -12,110 +12,93 @@ const Card = () => {
     blog,
     bio,
     location,
-    twitter_username,
+    login,
   } = githubUser;
 
   return (
     <Wrapper>
       <header>
         <img src={avatar_url} alt={name} />
-        <div>
-          <h4>{name}</h4>
-          <p>@{twitter_username || "-"}</p>
-        </div>
-        <a href={html_url}>follow</a>
       </header>
-      <p className="bio">{bio}</p>
-      <div className="links">
-        <p>
-          <MdBusiness></MdBusiness> {company}
-        </p>
-        <p>
-          <MdLocationOn></MdLocationOn> {location || "-"}
-        </p>
-        <a href={`https://${blog}`}>
-          <MdLink></MdLink> {blog}
+      <div className="user-right">
+        <h3>{name}</h3>
+        {/* <p>@{twitter_username || "-"}</p> */}
+        <a href={html_url} className="github-username">
+          @{login}
         </a>
+        <p className="bio">{bio}</p>
+        <div className="links">
+          <p>
+            <MdBusiness></MdBusiness> {company}
+          </p>
+          <p>
+            <MdLocationOn></MdLocationOn> {location || "-"}
+          </p>
+          <p>
+            <a href={`https://${blog}`}>
+              <MdLink></MdLink> {blog}
+            </a>
+          </p>
+        </div>
       </div>
     </Wrapper>
   );
 };
-const Wrapper = styled.article`
-  background: var(--clr-white);
-  padding: 1.5rem 2rem;
-  border-top-right-radius: var(--radius);
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+const Wrapper = styled.div`
   position: relative;
-  &::before {
-    content: "user";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-    background: var(--clr-white);
-    color: var(--clr-grey-5);
-    border-top-right-radius: var(--radius);
-    border-top-left-radius: var(--radius);
-    text-transform: capitalize;
-    padding: 0.5rem 1rem 0 1rem;
-    letter-spacing: var(--spacing);
-    font-size: 1rem;
-  }
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 700px;
+  margin: 0 auto;
   header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    column-gap: 1rem;
-    margin-bottom: 1rem;
+    text-align: right;
+    padding: 1em;
     img {
-      width: 75px;
-      height: 75px;
+      width: 190px;
+      height: 190px;
+      border: 6px solid var(--light-bg);
       border-radius: 50%;
     }
-    h4 {
-      margin-bottom: 0.25rem;
+  }
+  .user-right {
+    padding: 1em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.1rem;
     }
-    p {
-      margin-bottom: 0;
-    }
-    a {
-      color: var(--clr-primary-5);
-      border: 1px solid var(--clr-primary-5);
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      text-transform: capitalize;
-      letter-spacing: var(--spacing);
-      transition: var(--transition);
+    .github-username {
       cursor: pointer;
+      color: var(--gray-f);
+      font-size: 1.4rem;
+      font-family: var(--cursive-ff);
       &:hover {
-        background: var(--clr-primary-5);
-        color: var(--clr-white);
+        color: #ffd908;
       }
     }
-  }
-  .bio {
-    color: var(--clr-grey-3);
-  }
-  .links {
-    p,
-    a {
-      margin-bottom: 0.25rem;
+    .bio {
+      font-family: var(--primary-ff);
+      color: var(--gray-f);
+      margin: 0.7rem 0;
+    }
+    .links {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      p,
+      a {
+        margin-bottom: 0.4rem;
+        margin-right: 0.6rem;
+        display: flex;
+        align-items: center;
+        color: var(--gray-f);
+      }
       svg {
-        margin-right: 0.5rem;
+        margin-right: 0.3rem;
         font-size: 1.3rem;
-      }
-    }
-    a {
-      color: var(--clr-primary-5);
-      transition: var(--transition);
-      svg {
-        color: var(--clr-grey-5);
-      }
-      &:hover {
-        color: var(--clr-primary-3);
       }
     }
   }

@@ -102,16 +102,18 @@ const Wrapper = styled.div`
       }
     }
   }
-  h3 {
+  h4 {
     margin-bottom: 0;
-    color: var(--clr-grey-5);
+    color: var(--gray-f);
     font-weight: 400;
+    font-size: 1.5rem;
+    font-family: var(--cursive-ff);
   }
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr max-content;
     align-items: center;
-    h3 {
+    h4 {
       padding: 0 0.5rem;
     }
   }

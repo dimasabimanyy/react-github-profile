@@ -3,6 +3,7 @@ import { Info, Repos, User, Search, Navbar } from "../components";
 import loadingImage from "../images/preloader.gif";
 import { GithubContext } from "../context/context";
 import AppTitle from "../components/AppTitle";
+import Footer from "../components/Footer";
 const Dashboard = () => {
   const { isLoading } = React.useContext(GithubContext);
 
@@ -13,6 +14,7 @@ const Dashboard = () => {
         <Navbar></Navbar>
         <Search />
         <img src={loadingImage} alt="loading" className="loading-img" />
+        <Footer />
       </main>
     );
   }
@@ -22,9 +24,10 @@ const Dashboard = () => {
       <AppTitle />
       <Navbar></Navbar>
       <Search />
-      <Info />
       <User />
+      <Info />
       <Repos />
+      <Footer />
     </main>
   );
 };

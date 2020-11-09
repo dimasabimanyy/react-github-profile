@@ -1,0 +1,39 @@
+import React from "react";
+import styled from "styled-components";
+
+function Footer() {
+  return (
+    <Wrapper>
+      Built with{" "}
+      <a href="https://reactjs.org/" alt="react js">
+        React js
+      </a>{" "}
+      -
+      <a href="https://www.fusioncharts.com/" alt="fusion chart">
+        Fusion Chart
+      </a>{" "}
+      -
+      <a href="https://styled-components.com/" alt="styled components">
+        Styled Components
+      </a>{" "}
+      and more
+    </Wrapper>
+  );
+}
+
+const Wrapper = styled.section`
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-top: 3rem;
+  font-family: var(--cursive-ff);
+  font-size: 1.3rem;
+  color: var(--gray-f);
+  a {
+    color: var(--gray-f);
+  }
+  a:hover {
+    color: #ffd908;
+  }
+`;
+
+export default Footer;
