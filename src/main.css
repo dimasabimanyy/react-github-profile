@@ -143,9 +143,9 @@ p {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 90%;
   }
 }
 

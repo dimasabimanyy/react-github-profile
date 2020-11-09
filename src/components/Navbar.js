@@ -59,9 +59,10 @@ const Wrapper = styled.div`
     text-transform: uppercase;
     background: transparent;
     border: 1px solid var(--secondary-light-f);
-    border-radius: 15px;
+    border-radius: 20px;
     font-weight: 400;
     letter-spacing: 1px;
+    outline: none;
   }
 `;
 
