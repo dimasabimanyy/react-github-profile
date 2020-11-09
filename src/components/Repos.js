@@ -77,7 +77,7 @@ const Repos = () => {
   ];
 
   return (
-    <section className="section">
+    <section>
       <Wrapper className="container">
         {/* In case you forget how to make chart with fusion Chart */}
         {/* <ExampleChart data={chartData} /> */}
@@ -91,7 +91,7 @@ const Repos = () => {
         </div>
         <div className="repo-col-3">
           <Doughnut2D data={mostPopular} />
-          <Bar3D data={forks} />
+          <Bar3D data={forks} className="bar3d" />
         </div>
       </Wrapper>
     </section>
@@ -100,9 +100,7 @@ const Repos = () => {
 
 const Wrapper = styled.div`
   padding: 3rem 0;
-  /* background: maroon; */
-  div {
-  }
+  position: relative;
   .repo-col-1,
   .repo-col-3 {
     display: grid;
@@ -113,27 +111,40 @@ const Wrapper = styled.div`
   .repo-col-2 {
     margin-bottom: 2rem;
   }
-  /* display: grid;
-  justify-items: center;
-  gap: 2rem;
-  @media (min-width: 800px) {
-    grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 1100px) {
+    /* padding: 3rem 0; */
+    .repo-col-1,
+    .repo-col-3 {
+      column-gap: 2rem;
+    }
   }
 
-  @media (min-width: 1200px) {
-    grid-template-columns: 2fr 3fr;
-  }
+  @media screen and (max-width: 900px) {
+    padding: 1.5rem 0;
+    .repo-col-1,
+    .repo-col-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .repo-col-1,
+    .repo-col-2,
+    .repo-col-3 {
+      margin-bottom: 2rem;
+    }
 
-  div {
-    width: 100% !important;
-  }
-  .fusioncharts-container {
-    width: 100% !important;
+    .repo-col-1 {
+      gap: 3.5rem;
+    }
+
+    .repo-col-3 {
+      gap: 2rem;
+    }
   }
   svg {
     width: 100% !important;
     border-radius: var(--radius) !important;
-  } */
+  }
 `;
 
 export default Repos;

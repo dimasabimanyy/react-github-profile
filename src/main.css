@@ -149,6 +149,12 @@ p {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .section {
+    padding: 0;
+  }
+}
+
 /* .loading-img {
   width: 20rem;
   height: 20rem;

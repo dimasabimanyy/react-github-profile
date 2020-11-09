@@ -117,6 +117,13 @@ const Wrapper = styled.div`
       padding: 0 0.5rem;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    gap: 0.4rem;
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
 `;
 const ErrorWrapper = styled.article`
   position: absolute;

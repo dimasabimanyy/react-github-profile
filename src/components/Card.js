@@ -102,5 +102,37 @@ const Wrapper = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    header {
+      padding: 0;
+      text-align: center;
+      img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    .user-right {
+      padding: 0;
+      text-align: center;
+    }
+    .bio {
+      margin: 0;
+    }
+    .links {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .user-right {
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
 `;
 export default Card;

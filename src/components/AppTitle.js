@@ -89,6 +89,12 @@ const Wrapper = styled.div`
       animation: octocat-wave 560ms ease-in-out;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 export default AppTitle;

@@ -109,6 +109,17 @@ const Wrapper = styled.section`
       color: #fff;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 1rem 0;
+  }
+  
+  @media screen and (max-width: 800px) {
+    gap: .5rem;
 `;
 
 export default UserInfo;

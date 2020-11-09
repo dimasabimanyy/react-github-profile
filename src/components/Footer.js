@@ -34,6 +34,14 @@ const Wrapper = styled.section`
   a:hover {
     color: #ffd908;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    a {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 export default Footer;
