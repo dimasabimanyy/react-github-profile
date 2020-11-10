@@ -1,48 +1,12 @@
-## Starter Project
+<h1 align="center">
+  Github Profiler
+</h1>
 
-- css provided (global styles, styled components)
-- folders/files already setup
-- all imports included (warnings)
-- index.js for easier imports
+<p align="center"> 
+  A nicer look at your github profile.
+</p>
 
-## Styled Components
-
-[Styled-Components - Main Docs](https://styled-components.com/)
-
-```jsx
-import styled from "styled-components";
-
-const ReactComponent = () => {
- // logic here
- return <Wrapper>
- {some content}
- </Wrapper>
-}
-
-
-const Wrapper = styled.htmlElement`
-write your styles here
-`
-export default ReactComponent
-```
-
-## React Icons
-
-[React Icons - Main Docs](https://react-icons.github.io/react-icons/)
-
-```jsx
-import { FiUsers, FiUserPlus } from 'react-icons/fi';
-<FiUsers className='nameOfTheClass'> </FiUsers>;
-```
-
-## React Router Dom
-
-version used - "react-router-dom": "^5.2.0",
-
-- [react-router-dom - Main Docs](https://reactrouter.com/web/guides/quick-start)
-
-- <Switch> renders the first child <Route> that matches
-- A <Route path="*"> always matches
+![Website Screenshot](https://raw.githubusercontent.com/dimasabimanyy/react-github-profile/master/src/images/screenshot.png)
 
 ## Gihthub API
 
@@ -64,22 +28,6 @@ version used - "react-router-dom": "^5.2.0",
 ## Auth0
 
 - [Auth0 - Main Docs](https://auth0.com/)
-
-- Create Application
-- Choose : Single Page Web Applications
-- Choose : React
-- Go to Settings Tab
-- Copy/Paste Domain, ClientID - can be public (or use .env)
-- Add Domain -
-  for now http://localhost:3000 (DON'T COPY PASTE FROM URL BAR)
-
-  - Allowed Callback URLs
-  - Allowed Logout URLs
-  - Allowed Web Origins
-  - SAVE CHANGES!!!!!!!!!!!!!!!
-
-- Connections
-  email,social
 
 - [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
 - [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
