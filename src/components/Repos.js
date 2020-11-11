@@ -101,6 +101,9 @@ const Repos = () => {
 const Wrapper = styled.div`
   padding: 3rem 0;
   position: relative;
+  div {
+    position: relative;
+  }
   .repo-col-1,
   .repo-col-3 {
     display: grid;

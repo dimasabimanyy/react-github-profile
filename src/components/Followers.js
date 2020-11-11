@@ -25,6 +25,7 @@ const Followers = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
   position: relative;
   height: 400px;
   background: var(--darkest-bg);
@@ -52,6 +53,12 @@ const Wrapper = styled.div`
     padding: 1.7rem 2rem;
     gap: 1.5rem 1rem;
   }
+
+  @media screen and (max-width: 800px) {
+    .followers {
+      padding: 0.5rem 0.2rem;
+    }
+  }
   article {
     transition: var(--transition);
     padding: 0.15rem 0.5rem;
@@ -75,6 +82,23 @@ const Wrapper = styled.div`
       color: var(--gray-f);
       font-size: 0.98rem;
       font-family: var(--primary-ff);
+    }
+
+    @media screen and (max-width: 800px) {
+      article {
+        h4 {
+          font-size: 0.8rem;
+          margin-bottom: 0.1rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      article {
+        a {
+          display: hidden;
+        }
+      }
     }
   }
 `;

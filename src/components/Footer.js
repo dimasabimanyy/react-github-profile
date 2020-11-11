@@ -4,19 +4,21 @@ import styled from "styled-components";
 function Footer() {
   return (
     <Wrapper>
-      Built with{" "}
-      <a href="https://reactjs.org/" alt="react js">
-        React js
-      </a>{" "}
-      -{" "}
-      <a href="https://www.fusioncharts.com/" alt="fusion chart">
-        Fusion Chart
-      </a>{" "}
-      -{" "}
-      <a href="https://styled-components.com/" alt="styled components">
-        Styled Components
-      </a>{" "}
-      and more
+      <div className="container">
+        Built with{" "}
+        <a href="https://reactjs.org/" alt="react js">
+          React js
+        </a>{" "}
+        -{" "}
+        <a href="https://www.fusioncharts.com/" alt="fusion chart">
+          Fusion Chart
+        </a>{" "}
+        -{" "}
+        <a href="https://styled-components.com/" alt="styled components">
+          Styled Components
+        </a>{" "}
+        and more
+      </div>
     </Wrapper>
   );
 }

@@ -3,14 +3,19 @@ import styled from "styled-components";
 
 function AppTitle() {
   return (
-    <Wrapper className="container">
-      <h2>Github Profiler</h2>
-      <h4>
-        Built by{" "}
-        <a href="https://github.com/dimasabimanyy" alt="Dimas abimanyu github">
-          dimasabimanyy
-        </a>
-      </h4>
+    <Wrapper>
+      <div className="container">
+        <h2>Github Profiler</h2>
+        <h4>
+          Built by{" "}
+          <a
+            href="https://github.com/dimasabimanyy"
+            alt="Dimas abimanyu github"
+          >
+            dimasabimanyy
+          </a>
+        </h4>
+      </div>
       <a
         href="https://github.com/dimasabimanyy/react-github-profile"
         class="github-corner"
