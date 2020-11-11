@@ -28,7 +28,7 @@ const Search = () => {
         )}
         <form onSubmit={handleSubmit}>
           <div className="form-control">
-            <MdSearch />
+            <MdSearch className="md-search" />
             <input
               type="text"
               placeholder="Enter github user"
@@ -49,11 +49,26 @@ const Search = () => {
 };
 
 const Wrapper = styled.div`
-  position: relative;
   display: grid;
   margin: 1rem auto;
-  gap: 2rem;
+  /* gap: 2rem; */
+  @media screen and (max-width: 700px) {
+    .form-control {
+      column-gap: 0 !important;
+      grid-template-columns: 1fr auto !important;
+      .md-search {
+        display: none !important;
+      }
+      .btn-search {
+        /* background: red !important; */
+        width: 100% !important;
+        height: 100% !important;
+        font-size: 0.8rem !important;
+      }
+    }
+  }
   .form-control {
+    position: relative;
     transition: 0.3s ease-in-out;
     background: var(--light-bg);
     display: grid;
@@ -110,13 +125,13 @@ const Wrapper = styled.div`
     font-family: var(--cursive-ff);
   }
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     grid-template-columns: 1fr max-content;
     align-items: center;
     h4 {
       padding: 0 0.5rem;
     }
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     gap: 0.4rem;
