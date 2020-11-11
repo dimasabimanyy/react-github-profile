@@ -50,21 +50,38 @@ const Search = () => {
 
 const Wrapper = styled.div`
   display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
   margin: 1rem auto;
+  position: relative;
   /* gap: 2rem; */
   @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
     .form-control {
+      background: transparent !important;
       column-gap: 0 !important;
-      grid-template-columns: 1fr auto !important;
+      grid-template-columns: 1fr !important;
+      row-gap: 0.7rem;
+      input {
+        border-radius: 20px;
+        border: 2px solid var(--light-bg) !important;
+      }
       .md-search {
         display: none !important;
       }
       .btn-search {
-        /* background: red !important; */
-        width: 100% !important;
-        height: 100% !important;
+        margin: 0 auto;
+        background: var(--light-bg);
+        width: 90px;
+        height: 35px;
+        border-radius: 20px;
         font-size: 0.8rem !important;
       }
+    }
+    h4 {
+      margin: 0 auto;
+      margin-top: 0.4rem;
+      text-align: center;
     }
   }
   .form-control {
@@ -77,9 +94,14 @@ const Wrapper = styled.div`
     column-gap: 0.5rem;
     padding: 0.1rem 0.7rem;
     border-radius: 20px;
+    form {
+      border-radius: 20px;
+    }
     input {
       border-color: transparent;
       outline: none;
+      /* border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px; */
       color: var(--dark-f) !important;
       padding: 0.3rem 0.5rem;
       font-size: 0.95rem !important;
@@ -119,6 +141,8 @@ const Wrapper = styled.div`
   }
   h4 {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
     color: var(--gray-f);
     font-weight: 400;
     font-size: 1.5rem;

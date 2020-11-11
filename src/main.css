@@ -33,7 +33,7 @@ body {
   font-family: var(--primary-ff);
   color: var(--light-f);
   background: var(--dark-bg);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 ul {
@@ -142,7 +142,6 @@ p {
 @media screen and (max-width: 1150px) {
   .container {
     width: 90%;
-    background: maroon !important;
   }
 }
 
